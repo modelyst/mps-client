@@ -8,7 +8,7 @@ pip install git+https://github.com/modelyst/mps-client.git
 ```
 To further specify a version you can add a ref tag to the url like that shown below:
 ``` Python
-pip install git+https://github.com/modelyst/mps-client.git
+pip install git+https://github.com/modelyst/mps-client.git@v0.2.1
 ```
 
 ## Configuration

@@ -10,7 +10,7 @@ target-version = ['py36', 'py37', 'py38']
 [tool.commitizen]
 name = "cz_conventional_commits"
 tag_format = "v$version"
-version = "0.2.0"
+version = "0.2.1"
 version_files = [
   "pyproject.toml:version",
   "src/mps_client/__init__.py",
@@ -21,7 +21,7 @@ authors = ["Michael Statt <michael.statt@modelyst.io>"]
 description = "MPS Plotting and CLI Tool"
 license = "Apache-2.0"
 name = "mps-client"
-version = "0.2.0"
+version = "0.2.1"
 
 [tool.poetry.dependencies]
 aiofiles = "^22.1.0"

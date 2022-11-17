@@ -20,7 +20,6 @@ from dbgen import Entity, IDType
 from mps_client.schema.base import BaseTable, sa_registry
 
 
-
 class BaseJcapFile(Entity):
     __identifying__ = {'path', 'release_name', 's3_bucket'}
     release_name: str

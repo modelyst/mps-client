@@ -18,7 +18,7 @@ __author__ = "Michael Statt"
 __email__ = "michael.statt@modelyst.io"
 __maintainer__ = "Michael Statt"
 __maintainer_email__ = "michael.statt@modelyst.io"
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 
 from mps_client.core.queries import get_process_history, run_raw_query

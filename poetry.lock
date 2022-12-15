@@ -1,7 +1,7 @@
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.1,<4.0"
-content-hash = "9b02bbe4f8761c8d4db927054bbfc7ab44c825115c8c79b451064deabebea891"
+content-hash = "ea98fb3158034f19b02a8a151174cc45ed248adf392ab3e6a41c079caa12983d"
 
 [metadata.files]
 aiofiles = [
@@ -694,6 +694,9 @@ mypy = [
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
+]
+neo4j = [
+    {file = "neo4j-5.3.0.tar.gz", hash = "sha256:0c1c7d8812eed60da0a442d1e0f35edbda248255703e506a081cb70e083b3b5c"},
 ]
 nest-asyncio = [
     {file = "nest_asyncio-1.5.6-py3-none-any.whl", hash = "sha256:b9a953fb40dceaa587d109609098db21900182b16440652454a146cffb06e8b8"},
@@ -2181,6 +2184,20 @@ description = "Experimental type system extensions for programs checked with the
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "neo4j"
+version = "5.3.0"
+description = "Neo4j Bolt driver for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+pytz = "*"
+
+[package.extras]
+pandas = ["pandas (>=1.0.0)"]
 
 [[package]]
 name = "nest-asyncio"

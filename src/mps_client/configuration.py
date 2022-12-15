@@ -16,9 +16,29 @@ import os
 from textwrap import dedent
 from typing import Any, Dict, Optional, Union
 
-from pydantic import BaseSettings, PostgresDsn, SecretStr, parse_obj_as, validator
+from pydantic import AnyUrl, BaseSettings, PostgresDsn, SecretStr, parse_obj_as, validator
 
 from mps_client._enums import LogLevel
+
+
+class Neo4jDsn(AnyUrl):
+    allowed_schemes = {'neo4j', 'bolt'}
+    user_required = True
+    path: str
+
+    @classmethod
+    def validate_parts(cls, parts: Dict[str, str]):
+        defaults = {
+            'port': '7687',
+            'path': '/neo4j',
+        }
+        for key, value in defaults.items():
+            if not parts[key]:
+                parts[key] = value
+        return super().validate_parts(parts)  # type: ignore
+
+    def get_uri(self) -> str:
+        return f'{self.scheme}://{self.host}:{self.port}{self.path}'
 
 
 class PostgresqlDsn(PostgresDsn):
@@ -37,6 +57,8 @@ class Settings(BaseSettings):
     POSTGRES_PORT: str = "5432"
     POSTGRES_SCHEMA: str = "production"
     POSTGRES_DSN: Optional[PostgresDsn]
+    NEO4J_DSN: Neo4jDsn = parse_obj_as(Neo4jDsn, 'neo4j://neo4j@localhost:7687/neo4j')
+    NEO4J_PASSWORD: SecretStr = parse_obj_as(SecretStr, "")
 
     _always_set = {"POSTGRES_DSN"}
     _simple_params = {

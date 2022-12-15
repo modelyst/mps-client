@@ -1,5 +1,15 @@
 # MPS client
-A CLI Tool for Querying data within an instance of the Materials Provenance Store database.
+A CLI Tool for Querying data within an instance of the Materials Provenance Store (MPS) database.
+
+
+## Database Instantiation
+The MPS Client requires a connection to an instance of the MPS postgresql database. A postgresql rds instance must be available to restore the database archive file into. Once this instance is setup the database can be instantiated by following the steps below:
+
+1. Download the compressed SQL dump file from [CaltechDATA](https://data.caltech.edu/records/4kk39-69x76}).
+2. Extract the SQL file using the command `tar -zxvf RELEASE_FILE.tar.gz`
+3. Restore the database using the `pg_restore` command.
+
+This will create a copy of the MPS release that was presented in the MPS publication. The data can be browsed using raw sql CLI tools like psql, or user SQL user interfaces like DBeaver user interface. SQL queries can be written to return specific portions of the database that are of interest to the researcher.
 
 ## Installation
 To install the latest version of mps-client use the following command

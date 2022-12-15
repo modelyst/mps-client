@@ -370,6 +370,8 @@ modelyst-dbgen==1.0.0a7 ; python_full_version >= "3.8.1" and python_version < "4
 modelyst-sqlmodel==0.0.9 ; python_full_version >= "3.8.1" and python_version < "4.0" \
     --hash=sha256:e75b1166189216dc853d3e7e90d1ae62dab3bfbef2724056357faf4abaf98ad5 \
     --hash=sha256:f211ed7db61cacdb54d401434b4ba432b685c8c2320fe4defb59cfb0a33e6119
+neo4j==5.3.0 ; python_full_version >= "3.8.1" and python_version < "4.0" \
+    --hash=sha256:0c1c7d8812eed60da0a442d1e0f35edbda248255703e506a081cb70e083b3b5c
 networkx==2.8.7 ; python_full_version >= "3.8.1" and python_version < "4.0" \
     --hash=sha256:15cdf7f7c157637107ea690cabbc488018f8256fa28242aed0fb24c93c03a06d \
     --hash=sha256:815383fd52ece0a7024b5fd8408cc13a389ea350cd912178b82eed8b96f82cd3

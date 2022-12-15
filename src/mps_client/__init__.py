@@ -18,7 +18,7 @@ __author__ = "Michael Statt"
 __email__ = "michael.statt@modelyst.io"
 __maintainer__ = "Michael Statt"
 __maintainer_email__ = "michael.statt@modelyst.io"
-__version__ = "0.3.0"
+__version__ = "0.3.1"
 
 
 from mps_client.core.graph_queries import run_raw_graph_query

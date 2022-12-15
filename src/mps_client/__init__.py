@@ -21,4 +21,5 @@ __maintainer_email__ = "michael.statt@modelyst.io"
 __version__ = "0.3.0"
 
 
+from mps_client.core.graph_queries import run_raw_graph_query
 from mps_client.core.queries import get_process_history, run_raw_query
